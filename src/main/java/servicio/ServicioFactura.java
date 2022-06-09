@@ -4,10 +4,25 @@
  */
 package servicio;
 
+import java.util.ArrayList;
+import java.util.List;
+import modelo.Cliente;
+import modelo.Factura;
+
 /**
  *
  * @author Gus-Gus
  */
 public class ServicioFactura {
     
+    private final List<Factura> facturaList = new ArrayList<>();
+    
+    public Factura crear(Factura factura) {
+        this.facturaList.add(factura);
+        return factura;
+    }
+
+    public List<Factura> listar() {
+        return this.facturaList;
+}
 }

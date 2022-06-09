@@ -4,10 +4,24 @@
  */
 package servicio;
 
+import java.util.ArrayList;
+import java.util.List;
+import modelo.Producto;
+
 /**
  *
  * @author Gus-Gus
  */
 public class ServicioProducto {
     
+    private final List<Producto> productoList = new ArrayList<>();
+    
+    public Producto crear(Producto producto) {
+        this.productoList.add(producto);
+        return producto;
+    }
+
+    public List<Producto> listar() {
+        return this.productoList;
+    }
 }

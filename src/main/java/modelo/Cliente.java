@@ -11,46 +11,55 @@ import java.util.Date;
  * @author Gus-Gus
  */
 public class Cliente {
-    private long cedula;
-    private String nombre;
-    private String apellido;
+    
+    private long numCedula;
+    private String nombreCliente;
+    private String apellidoCliente;
     private String direccion;
     private Date yearNacimiento;
     private long telefono;
     private String correo;
 
-    public Cliente(long cedula, String nombre, String apellido, String direccion, Date yearNacimiento, long telefono, String correo) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Cliente(long numCedula, String nombreCliente, String apellidoCliente, String direccion, Date yearNacimiento, long telefono, String correo) {
+        this.numCedula = numCedula;
+        this.nombreCliente = nombreCliente;
+        this.apellidoCliente = apellidoCliente;
         this.direccion = direccion;
         this.yearNacimiento = yearNacimiento;
         this.telefono = telefono;
         this.correo = correo;
     }
 
-    public long getCedula() {
-        return cedula;
+    public Cliente(Integer valueOf, String param) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public void setCedula(long cedula) {
-        this.cedula = cedula;
+    public Cliente(Integer numeroCedula, String nombreCliente, String apellidoCliente, String direccion, Integer yearNacimiento, Integer telefono, String correo) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public String getNombre() {
-        return nombre;
+    public long getNumCedula() {
+        return numCedula;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNumCedula(long numCedula) {
+        this.numCedula = numCedula;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getNombreCliente() {
+        return nombreCliente;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
+    public String getApellidoCliente() {
+        return apellidoCliente;
+    }
+
+    public void setApellidoCliente(String apellidoCliente) {
+        this.apellidoCliente = apellidoCliente;
     }
 
     public String getDireccion() {
@@ -87,6 +96,6 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", yearNacimiento=" + yearNacimiento + ", telefono=" + telefono + ", correo=" + correo + '}';
+        return "Cliente{" + "numCedula=" + numCedula + ", nombreCliente=" + nombreCliente + ", apellidoCliente=" + apellidoCliente + ", direccion=" + direccion + ", yearNacimiento=" + yearNacimiento + ", telefono=" + telefono + ", correo=" + correo + '}';
     }
 }

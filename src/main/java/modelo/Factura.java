@@ -13,21 +13,25 @@ import java.util.Date;
 public class Factura {
     
     private int numFactura;
-    private Cliente cliente;
+    private Cliente unCliente;
     private String direccion;
-    private Producto producto;
-    private int catidad;
+    private Producto unProducto;
     private Date fecha;
     private int total;
+    private int cantidad;
 
-    public Factura(int numFactura, Cliente cliente, String direccion, Producto producto, int catidad, Date fecha, int total) {
+    public Factura(int numFactura, Cliente unCliente, String direccion, Producto unProducto, Date fecha, int total, int cantidad) {
         this.numFactura = numFactura;
-        this.cliente = cliente;
+        this.unCliente = unCliente;
         this.direccion = direccion;
-        this.producto = producto;
-        this.catidad = catidad;
+        this.unProducto = unProducto;
         this.fecha = fecha;
         this.total = total;
+        this.cantidad = cantidad;
+    }
+
+    public Factura(Integer valueOf, String param) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getNumFactura() {
@@ -38,12 +42,12 @@ public class Factura {
         this.numFactura = numFactura;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Cliente getUnCliente() {
+        return unCliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setUnCliente(Cliente unCliente) {
+        this.unCliente = unCliente;
     }
 
     public String getDireccion() {
@@ -54,20 +58,12 @@ public class Factura {
         this.direccion = direccion;
     }
 
-    public Producto getProducto() {
-        return producto;
+    public Producto getUnProducto() {
+        return unProducto;
     }
 
-    public void setProducto(Producto producto) {
-        this.producto = producto;
-    }
-
-    public int getCatidad() {
-        return catidad;
-    }
-
-    public void setCatidad(int catidad) {
-        this.catidad = catidad;
+    public void setUnProducto(Producto unProducto) {
+        this.unProducto = unProducto;
     }
 
     public Date getFecha() {
@@ -86,8 +82,16 @@ public class Factura {
         this.total = total;
     }
 
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
     @Override
     public String toString() {
-        return "Factura{" + "numFactura=" + numFactura + ", cliente=" + cliente + ", direccion=" + direccion + ", producto=" + producto + ", catidad=" + catidad + ", fecha=" + fecha + ", total=" + total + '}';
+        return "Factura{" + "numFactura=" + numFactura + ", unCliente=" + unCliente + ", direccion=" + direccion + ", unProducto=" + unProducto + ", fecha=" + fecha + ", total=" + total + ", cantidad=" + cantidad + '}';
     }
 }

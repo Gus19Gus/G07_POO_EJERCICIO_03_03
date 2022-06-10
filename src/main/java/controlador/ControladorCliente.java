@@ -12,7 +12,7 @@ import servicio.ServicioCliente;
  *
  * @author Gus-Gus
  */
-public class ClienteControl {
+public class ControladorCliente {
     
     private final ServicioCliente servicioCliente = new ServicioCliente();
     
@@ -21,10 +21,9 @@ public class ClienteControl {
          var nombreCliente = args[1];
          var apellidoCliente = args[2];
          var direccion= args[3];
-         var yearNacimiento=Integer.valueOf(args[4]);
-         var telefono = Integer.valueOf(args[5]);
-         var correo= args[6];
-         var cliente =new Cliente(numeroCedula,nombreCliente,apellidoCliente,direccion,yearNacimiento,telefono,correo);
+         var telefono = Integer.valueOf(args[4]);
+         var correo= args[5];
+         var cliente =new Cliente(numeroCedula,nombreCliente,apellidoCliente,direccion,telefono,correo);
          this.servicioCliente.crear(cliente);
          return cliente;
     }

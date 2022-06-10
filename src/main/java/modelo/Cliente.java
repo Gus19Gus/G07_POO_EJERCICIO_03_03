@@ -16,26 +16,24 @@ public class Cliente {
     private String nombreCliente;
     private String apellidoCliente;
     private String direccion;
-    private Date yearNacimiento;
     private long telefono;
     private String correo;
 
-    public Cliente(long numCedula, String nombreCliente, String apellidoCliente, String direccion, Date yearNacimiento, long telefono, String correo) {
+    public Cliente(long numCedula, String nombreCliente, String apellidoCliente, String direccion, long telefono, String correo) {
         this.numCedula = numCedula;
         this.nombreCliente = nombreCliente;
         this.apellidoCliente = apellidoCliente;
         this.direccion = direccion;
-        this.yearNacimiento = yearNacimiento;
         this.telefono = telefono;
         this.correo = correo;
     }
 
     public Cliente(Integer valueOf, String param) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
-    public Cliente(Integer numeroCedula, String nombreCliente, String apellidoCliente, String direccion, Integer yearNacimiento, Integer telefono, String correo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Cliente() {
+        
     }
 
     public long getNumCedula() {
@@ -70,14 +68,6 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public Date getYearNacimiento() {
-        return yearNacimiento;
-    }
-
-    public void setYearNacimiento(Date yearNacimiento) {
-        this.yearNacimiento = yearNacimiento;
-    }
-
     public long getTelefono() {
         return telefono;
     }
@@ -96,6 +86,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "numCedula=" + numCedula + ", nombreCliente=" + nombreCliente + ", apellidoCliente=" + apellidoCliente + ", direccion=" + direccion + ", yearNacimiento=" + yearNacimiento + ", telefono=" + telefono + ", correo=" + correo + '}';
+        return "Cliente{" + "numCedula=" + numCedula + ", nombreCliente=" + nombreCliente + ", apellidoCliente=" + apellidoCliente + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + '}';
     }
+
 }

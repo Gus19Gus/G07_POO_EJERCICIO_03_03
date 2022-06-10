@@ -16,4 +16,6 @@ public interface ISedrvicioFactura {
     
     public Factura crear(Factura factura);
     public List<Factura> listar();
+    public Factura buscarCodigo(int codigo);
+    public Factura eliminar(int codigo);
 }

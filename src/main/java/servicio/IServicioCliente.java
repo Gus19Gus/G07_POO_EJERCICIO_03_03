@@ -15,5 +15,7 @@ public interface IServicioCliente {
     
     public Cliente crear(Cliente cliente);
     public List<Cliente> listar();
+    public Cliente buscarCodigo(int codigo);
+    public Cliente eliminar(int codigo);
     
 }

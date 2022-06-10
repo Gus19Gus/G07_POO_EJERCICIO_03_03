@@ -6,23 +6,59 @@ package servicio;
 
 import java.util.ArrayList;
 import java.util.List;
-import modelo.Cliente;
 import modelo.Factura;
 
 /**
  *
  * @author Gus-Gus
  */
-public class ServicioFactura {
+public class ServicioFactura implements ISedrvicioFactura {
     
     private final List<Factura> facturaList = new ArrayList<>();
-    
+
+    @Override
     public Factura crear(Factura factura) {
         this.facturaList.add(factura);
-        return factura;
+    return factura;
     }
 
+    @Override
     public List<Factura> listar() {
         return this.facturaList;
-}
+    }
+
+    @Override
+    public Factura buscarCodigo(int codigo) {
+       var factura = new Factura();
+       for(factura fac:this.facturaList){
+           if(fac.getCodigo()==i){
+               factura = fac;
+               break;
+           }
+       }
+       return auto;
+    }
+
+    @Override
+    public Factura eliminar(int codigo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    }
+
+    @Override
+    public List<Factura> listar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Factura buscarCodigo(int codigo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Factura eliminar(int codigo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }

@@ -31,7 +31,11 @@ public class Factura {
     }
 
     public Factura(Integer valueOf, String param) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        }
+
+    public Factura(int i, String direccion, int i0, int i1) {
+        
     }
 
     public int getNumFactura() {
